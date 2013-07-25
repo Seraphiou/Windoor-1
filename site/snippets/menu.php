@@ -1,12 +1,16 @@
 <nav id="nav">
     <ul class="nav-lang">
-        <li><a class="nav-lang-active" href="#">fr</a></li>
-        <li><a href="#">en</a></li>
-        <li><a href="#">de</a></li>
+      <?php foreach(c::get('lang.available') as $lang): ?>
+      <li>
+        <a<?php if($lang == c::get('lang.current')) echo ' class="nav-lang-active"' ?> href="<?php echo $page->url($lang) ?>"><?php echo $lang ?></a>
+      </li>
+      <?php endforeach ?>
     </ul>
     <ul class="nav-main">
+        <?php $navCount = 1; ?>
         <?php foreach($pages->visible() AS $p): ?>
-        <li<?php echo ($p->isOpen()) ? ' class="nav-active"' : '' ?>><a href="<?php echo $p->url() ?>" class="nav-link"><?php echo html($p->title()) ?></a></li>
+        <li class="nav-link<?php echo $navCount ?>"><a href="<?php echo $p->url() ?>" class="nav-link<?php echo ($p->isOpen()) ? ' nav-active' : '' ?>"><?php echo html($p->title()) ?></a></li>
+        <?php $navCount++ ?>
         <?php endforeach ?>
     </ul>
 </nav>

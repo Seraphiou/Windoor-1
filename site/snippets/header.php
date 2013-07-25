@@ -12,7 +12,7 @@
         <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
         <?php echo css('assets/styles/styles.css') ?>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <?php echo js('assets/js/vendor/modernizr-2.6.2.min.js') ?>
     </head>
     <body>
         <header id="header" class="clearfix">
