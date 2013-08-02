@@ -14,7 +14,7 @@
                 <li class="nav2">
                     <a class="nav2-link">
                         <span class="nav2-title"><?php echo $product->title(); ?></span>
-                        <span class="nav2-description"><?php echo kirbytext($page->text()) ?></span>
+                        <span class="nav2-description"><?php echo kirbytext($product->description()) ?></span>
                     </a>
                 </li>
                 <?php endforeach ?>
@@ -28,7 +28,7 @@
         <?php $subproducts = $page->parent()->children() ?>
         <?php $subproducts_count = 0; ?>
         <?php foreach($subproducts as $subproduct): $subproducts_count++ ?>
-        <li tab="#tab-<?php echo $subproducts_count ?>"><?php echo $subproduct->title() ?></li>
+        <li tab="#tab-<?php echo $subproducts_count ?>"><a href="<?php echo $subproduct->url() ?>"><?php echo $subproduct->title() ?></a></li>
     <?php endforeach ?>
     </ul>
     <div class="tabs-buttons">
@@ -37,115 +37,92 @@
     </div>
     <div class="tabs-main">
         <article id="tab-1" class="tabs-content-current tabs-content">
-            <div class="tabs-header">
-                <img class="presentation-image" src="img/careview.png" alt="Careview" />
-                <h2 class="tabs-header-title"><b>Care</b> view</h2>
-                <p class="presentation-description">Systèmes de rétrovision et enregistreur vidéo embarqué pour camions, poids-lourds et véhicules industriels</p>
-            </div>
-            <div class="tabs-body">
-            <p>CARE VIEW se décline en plusieurs versions sous forme de kit se composant d'une (ou plusieurs) caméra(s) placée(s) à l'arrière du véhicule et d'un moniteur installé dans l'habitacle. CARE VIEW est destiné à tout type de poids lourd, bus utilitaire et autres porteurs.</p>
-
-            <p>Il permet au conducteur d'opérer aisément en marche arrière dans des espaces exigus et d'éviter tout risque d'accrochage ou de collision avec des obstacles auparavant invisibles. Il rend ainsi la conduite plus sûre.</p>
-
-            <p>Outre le confort de conduite et la prévention d'accidents, le système contribue à la sécurité des personnes et des biens.</p>
-            </div><!-- .tabs-body -->
-        </article>
-
-        <article id="tab-2" class="tabs-content">
             <header class="tabs-header">
-                <figure>
-                    <img src="img/moniteur.png" alt="Moniteur" />
-                    <figcaption>Moniteur N et B 5,5 pouces</figcaption>
-                </figure>
-                <figure>
-                    <img src="img/cable.png" alt="Cable" />
-                    <figcaption>Câble de 20m</figcaption>
-                </figure>
-                <figure>
-                    <img src="img/camera.png" alt="Camera" />
-                    <figcaption>Camera CVC-N5</figcaption>
-                </figure>
-            </header><!-- .tabs-header -->
+                        <figure>
+                            <img src="img/moniteur.png" alt="Moniteur" />
+                            <figcaption>Moniteur N et B 5,5 pouces</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/cable.png" alt="Cable" />
+                            <figcaption>Câble de 20m</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/camera.png" alt="Camera" />
+                            <figcaption>Camera CVC-N5</figcaption>
+                        </figure>
+                    </header><!-- .tabs-header -->
             <div class="tabs-body">
-                <ul>
-                    <li>moniteur N et B 5,5 pouces</li>
-                    <li>économique et compacte</li>
-                    <li>leds infrarouges et son intégrés</li>
-                </ul>
-                <h2 class="tabs-title">Moniteur CVM-N5</h2>
-                <table class="tabs-table">
-                    <tr>
-                        <th>
-                            Écran
-                        </th>
-                        <td>
-                            cathodique 5,5 pouces (123mm de diagonale) avec haut-parleur intégré.
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Tension d'alimentation</th>
-                        <td>DC 11 ~ 32 V.</td>
-                    </tr>
-                    <tr>
-                        <th>Résistance aux vibrations mécaniques
-                        </th>
-                        <td>6.8G</td>
-                    </tr>
-                    <tr>
-                        <th>Température de fonctionnement
-                        </th>
-                        <td>0°C à +60°C.</td>
-                    </tr>
-                </table>
+            <ul>
+                            <li>moniteur N et B 5,5 pouces</li>
+                            <li>économique et compacte</li>
+                            <li>leds infrarouges et son intégrés</li>
+                        </ul>
+                        <h2 class="tabs-title">Moniteur CVM-N5</h2>
+                        <table class="tabs-table">
+                            <tr>
+                                <th>
+                                    Écran
+                                </th>
+                                <td>
+                                    cathodique 5,5 pouces (123mm de diagonale) avec haut-parleur intégré.
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Tension d'alimentation</th>
+                                <td>DC 11 ~ 32 V.</td>
+                            </tr>
+                            <tr>
+                                <th>Résistance aux vibrations mécaniques
+                                </th>
+                                <td>6.8G</td>
+                            </tr>
+                            <tr>
+                                <th>Température de fonctionnement
+                                </th>
+                                <td>0°C à +60°C.</td>
+                            </tr>
+                        </table>
 
-                <h2 class="tabs-title">Accessoires fournis dans le Kit</h2>
-                <figure>
-                    <img src="img/visDeSerrage.jpg" alt="" />
-                    <figcaption>Vis de serrage du support en U</figcaption>
-                </figure>
-                <figure>
-                    <img src="img/filmDeDirectionAcoller.jpg" alt="" />
-                    <figcaption>Film de direction à coller</figcaption>
-                </figure>
-                <figure>
-                    <img src="img/visDeSerrageAuTableau.jpg" alt="" />
-                    <figcaption>Vis de serrage au tableau</figcaption>
-                </figure>
-                <figure>
-                    <img src="img/cableAlimentation.jpg" alt="" />
-                    <figcaption>Câble d'alimentation</figcaption>
-                </figure>
-                <figure>
-                    <img src="img/tamponAntiVibration.jpg" alt="" />
-                    <figcaption>Tampon anti-vibration</figcaption>
-                </figure>
-                <figure>
-                    <img src="img/pareSoleil.jpg" alt="" />
-                    <figcaption>Pare-soleil</figcaption>
-                </figure>
-                <figure>
-                    <img src="img/supportEnU.jpg" alt="" />
-                    <figcaption>Support en U</figcaption>
-                </figure>
-                <figure>
-                    <img src="img/manuelUtilisation.jpg" alt="" />
-                    <figcaption>Manuel d'utilisation</figcaption>
-                </figure>
-                <figure>
-                    <img src="img/cableMoniteurCamera20m.jpg" alt="" />
-                    <figcaption>Cable Moniteur-Camera de 20m</figcaption>
-                </figure>
-
+                        <h2 class="tabs-title">Accessoires fournis dans le Kit</h2>
+                        <figure>
+                            <img src="img/visDeSerrage.jpg" alt="" />
+                            <figcaption>Vis de serrage du support en U</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/filmDeDirectionAcoller.jpg" alt="" />
+                            <figcaption>Film de direction à coller</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/visDeSerrageAuTableau.jpg" alt="" />
+                            <figcaption>Vis de serrage au tableau</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/cableAlimentation.jpg" alt="" />
+                            <figcaption>Câble d'alimentation</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/tamponAntiVibration.jpg" alt="" />
+                            <figcaption>Tampon anti-vibration</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/pareSoleil.jpg" alt="" />
+                            <figcaption>Pare-soleil</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/supportEnU.jpg" alt="" />
+                            <figcaption>Support en U</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/manuelUtilisation.jpg" alt="" />
+                            <figcaption>Manuel d'utilisation</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/cableMoniteurCamera20m.jpg" alt="" />
+                            <figcaption>Cable Moniteur-Camera de 20m</figcaption>
+                        </figure>
             </div><!-- .tabs-body -->
-        </article><!-- .tab-content -->
-
-        <article id="tab-3" class="tab-content">
-            <h4>Price</h4>
         </article>
 
-        <article id="tab-4" class="tab-content">
-            <h4>Release Date</h4>
-        </article>
 </section>
 
 <?php snippet('footer') ?>

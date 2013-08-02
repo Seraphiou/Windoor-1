@@ -12,7 +12,7 @@
         <?php foreach($products as $product): ?>
         <div class="product">
             <h2 class="product-title"><?php echo $product->title(); ?></h2>
-            <p class="product-description"><?php echo $product->text() ?></p>
+            <p class="product-description"><?php echo $product->description() ?></p>
             <a href="<?php echo $product->url() ?>" class="product-link"><span class="product-link-plus">+</span> En savoir plus</a>
         </div>
         <?php endforeach ?>
