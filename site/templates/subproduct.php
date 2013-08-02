@@ -1,7 +1,7 @@
 <?php snippet('header') ?>
 <?php snippet('menu') ?>
     <img src="<?php echo url('assets/img/small-logo-header.png') ?>" class="small-header-logo" alt="Windoor" />
-    <h1 class="header-title-page"><?php echo html($page->parent()->title()) ?></h1>
+    <h1 class="header-title-page"><?php echo html($page->parent()->parent()->title()) ?></h1>
 </header>
 <div class="l-constrained">
     <div id="nav2">
@@ -14,7 +14,7 @@
                 <li class="nav2">
                     <a class="nav2-link">
                         <span class="nav2-title"><?php echo $product->title(); ?></span>
-                        <span class="nav2-description"><?php echo $product->text() ?></span>
+                        <span class="nav2-description"><?php echo kirbytext($page->text()) ?></span>
                     </a>
                 </li>
                 <?php endforeach ?>
@@ -38,13 +38,16 @@
     <div class="tabs-main">
         <article id="tab-1" class="tabs-content-current tabs-content">
             <div class="tabs-header">
-                <?php $image = $page->images()->find('01.png') ?>
-                <img src="<?php echo $image->url() ?>" alt="<?php echo $image->title() ?>" />
-                <h2 class="tabs-header-title"><?php echo $page->title() ?></h2>
-                <p class="presentation-description"><?php echo $page->description() ?></p>
+                <img class="presentation-image" src="img/careview.png" alt="Careview" />
+                <h2 class="tabs-header-title"><b>Care</b> view</h2>
+                <p class="presentation-description">Systèmes de rétrovision et enregistreur vidéo embarqué pour camions, poids-lourds et véhicules industriels</p>
             </div>
             <div class="tabs-body">
-            <?php echo kirbytext($page->text()) ?>
+            <p>CARE VIEW se décline en plusieurs versions sous forme de kit se composant d'une (ou plusieurs) caméra(s) placée(s) à l'arrière du véhicule et d'un moniteur installé dans l'habitacle. CARE VIEW est destiné à tout type de poids lourd, bus utilitaire et autres porteurs.</p>
+
+            <p>Il permet au conducteur d'opérer aisément en marche arrière dans des espaces exigus et d'éviter tout risque d'accrochage ou de collision avec des obstacles auparavant invisibles. Il rend ainsi la conduite plus sûre.</p>
+
+            <p>Outre le confort de conduite et la prévention d'accidents, le système contribue à la sécurité des personnes et des biens.</p>
             </div><!-- .tabs-body -->
         </article>
 
