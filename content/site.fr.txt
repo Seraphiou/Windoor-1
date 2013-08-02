@@ -1,0 +1,18 @@
+﻿Title: Windoor - Votre partenaire sécurité
+
+----
+
+Author: Windoor
+
+----
+
+Description: Site professionnel dans le domaine de la sécurité embarquée. 
+Verrouillage VUL et Poids-Lourds, caméras et radars de recul, automatismes et géolocalisation.
+
+----
+
+Keywords: Windoor, verrouillage, poids-lourd, caméra, recul, véhicule, industriel
+
+----
+
+Copyright: © (date: Year)

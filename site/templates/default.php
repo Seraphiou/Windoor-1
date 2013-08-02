@@ -8,29 +8,14 @@
     </p>
 
     <div class="l-constrained clearfix">
+        <?php $products = $pages->find('products')->children(); ?>
+        <?php foreach($products as $product): ?>
         <div class="product">
-            <h2 class="product-title"><b>Care</b>view</h2>
-            <p class="product-description">Systèmes de retrovision et enregistreur vidéo embarqué</p>
-            <a href="" class="product-link"><span class="product-link-plus">+</span> En savoir plus</a>
+            <h2 class="product-title"><?php echo $product->title(); ?></h2>
+            <p class="product-description"><?php echo $product->text() ?></p>
+            <a href="<?php echo $product->url() ?>" class="product-link"><span class="product-link-plus">+</span> En savoir plus</a>
         </div>
-
-        <div class="product">
-            <h2 class="product-title"><b>Care</b>lock</h2>
-            <p class="product-description">Systèmes de verrouillage</p>
-            <a href="" class="product-link"><span class="product-link-plus">+</span> En savoir plus</a>
-        </div>
-
-        <div class="product">
-            <h2 class="product-title"><b>Win</b>guard</h2>
-            <p class="product-description">Systèmes de verrouillage</p>
-            <a href="" class="product-link"><span class="product-link-plus">+</span> En savoir plus</a>
-        </div>
-
-        <div class="product">
-            <h2 class="product-title"><b>Sensor</b>tech</h2>
-            <p class="product-description">Systèmes de verrouillage</p>
-            <a href="" class="product-link"><span class="product-link-plus">+</span> En savoir plus</a>
-        </div>
+        <?php endforeach ?>
     </div><!-- .l-constrained-->
 </header>
 <section id="news">

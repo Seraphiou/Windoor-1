@@ -2,7 +2,7 @@
 
 # default blueprint
 
-title: Page
+title: News
 pages: true
 files: true
 fields:
@@ -13,3 +13,7 @@ fields:
     label: Text
     type:  textarea
     size:  large
+  date:
+    label: Date
+    type:   date
+    format: dd.mm.yy
